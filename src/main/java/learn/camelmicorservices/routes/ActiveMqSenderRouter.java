@@ -8,7 +8,7 @@ public class ActiveMqSenderRouter extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
-		from("timer:activemq-timer?period=5000").transform().constant("my message").to("activemq:my-queue");
+		from("timer:activemq-timer?period=5000").transform().constant("my message").log("${body}").to("activemq:my-queue");
 
 	}
 }
