@@ -9,6 +9,6 @@ public class ActiveMqReaderRouter extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 		from("rabbitmq:my-queue").log("${body}").to("rabbitmq:sec-queue");
-		from("activemq:sec-queue").log("second").log("${body}").to("rabbitmq:third-queue")
+		from("rabbitmq:sec-queue").log("second").log("${body}").to("rabbitmq:third-queue")
 	;}
 }
