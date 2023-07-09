@@ -30,7 +30,12 @@
 			<groupId>org.apache.camel.springboot</groupId>
 			<artifactId>camel-spring-boot-starter</artifactId>
 			<version>3.10.0</version>
-		</dependency>
+		</dependency><dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-websocket-starter</artifactId>
+    <version>3.10.0</version>
+</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.apache.camel/camel-websocket-starter -->
 <dependency>
     <groupId>org.apache.camel</groupId>
