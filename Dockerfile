@@ -6,4 +6,4 @@ RUN mvn -f /home/app/pom.xml clean package
 FROM openjdk:11-jdk 
 COPY --from=build /home/app/target/*.jar app.jar
 EXPOSE 10000
-ENTRYPOINT ["java","-jar","/app.jar", "--debug"]
+ENTRYPOINT ["java","-jar","/app.jar"]
