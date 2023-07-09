@@ -9,7 +9,7 @@ public class ActiveMqSenderRouter extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 int i=0;
-		from("timer:activemq-timer?period=100").transform().constant("name:new"+(++i) ).log("${body}").to("/app/message");
+		from("timer:wss-timer?period=100").transform().constant("name:new"+(++i) ).log("${body}").to("wss://app/message");
 
 	}
 }
