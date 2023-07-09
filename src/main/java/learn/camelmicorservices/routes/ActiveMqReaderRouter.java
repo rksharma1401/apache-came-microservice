@@ -3,7 +3,7 @@ package learn.camelmicorservices.routes;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class ActiveMqReaderRouter extends RouteBuilder {
 
 	@Override
