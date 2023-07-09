@@ -33,7 +33,7 @@
 		</dependency>
 		<dependency>
     <groupId>org.apache.camel</groupId>
-    <artifactId>camel-websocket</artifactId>
+    <artifactId>camel-websocket-starter</artifactId>
     <version>3.10.0</version>
     <!-- use the same version as your Camel core version -->
 </dependency>
