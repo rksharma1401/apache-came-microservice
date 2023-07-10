@@ -41,12 +41,7 @@
     <version>3.10.0</version>
     <!-- use the same version as your Camel core version -->
 </dependency>
-<dependency>
-    <groupId>org.apache.camel</groupId>
-    <artifactId>camel-undertow</artifactId>
-    <version>3.10.0</version>
-    <!-- use the same version as your Camel core version -->
-</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
