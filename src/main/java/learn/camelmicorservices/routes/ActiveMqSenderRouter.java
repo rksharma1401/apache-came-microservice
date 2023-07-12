@@ -5,12 +5,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ActiveMqSenderRouter extends RouteBuilder {
- 
+
 	@Override
 	public void configure() throws Exception {
-int i=0;
-		from("timer:wss-timer?period=5000").transform().constant("{\"name\":\"new"+(++i)+"\"}" )
-			.log("${body}").to("websocket://spring-ou5b.onrender.com/web-socket-endpoint?sendToAll=true");
+
+		from("timer:wss-timer?period=5000").transform().constant("{\"name\":\"new" + "\"}")
+		.log("Created" + "${body}")
+		.to("bean:webSocketStompClientImpl?method=sendMessage");
 
 	}
 }
