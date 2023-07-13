@@ -22,6 +22,7 @@ import org.springframework.messaging.converter.MappingJackson2MessageConverter;
 import org.springframework.messaging.converter.MessageConverter;
 import org.springframework.messaging.converter.StringMessageConverter;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.socket.client.standard.StandardWebSocketClient;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
@@ -32,6 +33,7 @@ import learn.camelmicorservices.handlers.StompSessionHandlerAdapterImpl;
 @SpringBootApplication
 @EnableScheduling
 @EnableWebSocket
+@Controller
 public class CamelMicorservicesApplication {
 	
 	@GetMapping("isWorking")
