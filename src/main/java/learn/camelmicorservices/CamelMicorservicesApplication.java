@@ -16,11 +16,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.converter.CompositeMessageConverter;
 import org.springframework.messaging.converter.MappingJackson2MessageConverter;
 import org.springframework.messaging.converter.MessageConverter;
 import org.springframework.messaging.converter.StringMessageConverter;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.socket.client.standard.StandardWebSocketClient;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.messaging.WebSocketStompClient;
@@ -31,6 +33,12 @@ import learn.camelmicorservices.handlers.StompSessionHandlerAdapterImpl;
 @EnableScheduling
 @EnableWebSocket
 public class CamelMicorservicesApplication {
+	
+	@GetMapping("isWorking")
+	public ResponseEntity<String> isWorking() {
+		return ResponseEntity.ok("Running");
+
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(CamelMicorservicesApplication.class, args);
