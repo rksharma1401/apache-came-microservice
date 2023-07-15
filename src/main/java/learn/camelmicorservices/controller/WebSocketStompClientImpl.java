@@ -42,7 +42,7 @@ public class WebSocketStompClientImpl {
 			System.out.println("message send");
 		} else {
 			System.out.println("reconnect no message send");
-			reconnect();
+			try{reconnect();}catch(Exception e){System.out.println("reconnecting issue :- "+e.getMessage();}
 		}
 
 	}
