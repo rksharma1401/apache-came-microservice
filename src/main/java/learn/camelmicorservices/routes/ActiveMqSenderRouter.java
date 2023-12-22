@@ -9,7 +9,7 @@ public class ActiveMqSenderRouter extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 
-		from("timer:wss-timer?period=400000").transform().constant("{\"name\":\"new" + "\"}")
+		from("timer:wss-timer?period=1000").transform().constant("{\"name\":\"new" + "\"}")
 		.log("Created" + "${body}")
 		.to("bean:webSocketStompClientImpl?method=sendMessage");
 
